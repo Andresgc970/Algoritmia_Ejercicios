@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivo y negativo</title>
+
+<!-- Nombre: Programa que determina que si un numero es negativo o positivo -->
+
+<!--Entrada Variable Tipo Entero (Numero1)-->
+<!--Nombre: Andres Felipe-->
+<!--Apellido: Guavita Cardenas -->
+
+<!--Salida:Se da la informacion de si el numero ingresado es negativo o positivo-->
+
+<!--Proceso Se ingresa un numero si este numero es mayor a 0 el numero sera positivo,del caso contrario
+si el numero ingresado es menor a cero informara que es negativo, si se ingresa el numero 0
+el sistema informa que es 0 -->
+</head>
+<body>
+   
+    <h2> Digite un numero</h2>
+    <input type ="number" id ="numero1">
+    <button onclick="verificar()">verificar</button>
+    <p id="resultado"></p>
+    <script>
+        function verificar(){
+            let numero1 = parseFloat(document.getElementById("numero1").value);
+            let resultado = "";
+            if (numero1 > 0) {resultado = "El numero es positivo";}
+                else if (numero1 < 0) {resultado = "El numero es negativo";}
+                else {resultado = "El numero es cero";}
+document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerificarSiPuedeVotar</title>
+  
+<!-- Nombre: Programa que determina que si un colombiano puede votar -->
+
+<!--Entrada: Variable tipo entero (Edad),Variable tipo texto (Nacionalidad) -->
+<!--Nombre: Andres Felipe-->
+<!--Apellido: Guavita Cardenas -->
+
+<!-- Salida: se informa si la persona puede o no votar en colombia -->
+
+<!--Proceso Se solicita que se ingrese la edad y nacionalidad de una persona y determina si puede votar en 
+    colombia, si no cumple con los requisitos se le infoma que no podra votar-->
+    
+</head>
+
+
+<body>
+
+    <h2> Ingrese la edad</h2>
+    <input type ="number" id ="edad">
+    <h2>ingrese su nacionalidad</h2>
+    <input type = "text" id="nacionalidad">
+    <button onclick="verificar()">verificar</button>
+    <p id="resultado"></p>
+
+    
+    <script>
+
+        function verificar(){
+            let edad = parseFloat(document.getElementById("edad").value);
+            let nacionalidad =(document.getElementById("nacionalidad").value);
+            let resultado = "";
+            if (edad >= 18 && nacionalidad == "colombia") {resultado = "Si puede votar";}  
+                else {resultado = "No puede votar";}
+document.getElementById("resultado").innerText = resultado;
+        }
+
+        
+    </script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceder Permiso</title>
+<!-- Nombre: Programa que concede permiso al acceder a un sitio -->
+
+<!--Entrada: Variable tipo texto (clave) -->
+<!--Nombre: Andres Felipe-->
+<!--Apellido: Guavita Cardenas -->
+
+<!-- Salida: se informa si tiene el acceso concedido o denegado-->
+
+<!--Proceso Se solicita que se ingrese una clave, si la clave es correcta se dara acceso.-->
+</head>
+<body>
+    <h2> Ingrese la clave para brindar el acceso</h2>
+    <input type ="text" id ="clave">
+    <button onclick="verificar()">verificar</button>
+    <p id="resultado"></p>
+    <script>
+        function verificar(){
+            let clave = (document.getElementById("clave").value);
+            let resultado = "";
+            if (clave === "admin") {resultado = "Acceso concedido!!";}
+                else {resultado = "Vuelva a intentarlo";}
+document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>

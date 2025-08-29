@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar tipo de Triangulo</title>
+<!-- Nombre: Programa que determina si un triangulo es equilatero escaleno o isosceles -->
+
+<!--Entrada: Variable tipo entero (L1) (L2) (L3) -->
+<!--Nombre: Andres Felipe-->
+<!--Apellido: Guavita Cardenas -->
+
+<!-- Salida: Segun la informacion suminstrada arrojara como resultado si el triangulo es equilatero
+  escaleno o isosceles-->
+
+<!--Proceso Se solicita que se ingrese tres valores tipo numericos los cuales van a determinar si un triangulo 
+es equilatero escaleno o isosceles,  para el caso del equilatero todos su lados seran iguales, para el caso del
+isosceles tendra un lado diferente y los otros dos iguales y para el ultimo caso el escaleno, no se cumple ninguna
+de la dos funciones-->
+</head>
+<body>
+    <h2>Ingrese Lado 1 </h2>
+    <input type ="number" id ="L1">
+    <h2> Ingrese Lado 2 </h2>
+    <input type ="number" id ="L2">
+    <h2>Ingrese Lado 3 </h2>
+    <input type ="number" id ="L3">
+    <button onclick="verificar()">verificar</button>
+    <p id="resultado"></p>
+    <script>
+        function verificar(){
+            let L1 =parseFloat(document.getElementById("L1").value);
+             let L2 =parseFloat(document.getElementById("L2").value);
+              let L3 =parseFloat(document.getElementById("L3").value);
+            let resultado = "";
+            if (L1 === L2 && L2 === L3) {resultado = "El triangulo es equilatero";}
+                else if ((L1 != L2 && L1 == L3) || (L2 != L3 && L2 === L1) || (L1 != L3 && L2 === L3)) {resultado = "El triangulo es isosceleces";}
+                else {resultado = "El triangulo es escaleno";}
+document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>
